@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Movement
+    </title>
+    <style>
+
+        body{
+            width: 100%;
+            height: 100svh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .child{
+
+            /*transform: rotateZ(360deg) translateX(200px);*/
+            height: 100px;
+            width: 100px;
+            border: 1px solid black;
+            background-color: red;
+            border-radius: 50%;
+            animation-name: myanimation;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+
+        @keyframes myanimation {
+            0%{
+                
+            transform :rotateZ(0deg) translateX(100px);
+            }
+            100%{
+                transform: rotateZ(360deg) translateX(100px);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child">
+
+        </div>
+    </div>
+</body>
+</html>

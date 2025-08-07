@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>Task 6</title>
+    </head>
+    <body>
+        <h1>Application Form</h1>
+        <form>
+            <label>First name: </label>
+            <input type="text" placeholder="Enter first name:" required/>
+            <label>Last Name: </label>
+            <input type="text" placeholder="Enter last name:" required/>
+            <br><br>
+            <label>Date of birth: </label>
+            <input type="date" required/>
+            <label>Age: </label>
+            <input type="number" min="5" max="100" required/>
+            <br><br>
+            <label>Gender: </label>
+            <select>
+                <option>Male</option>
+                <option>Female</option>
+                <option>Other</option>
+            </select>
+            <label>Email Address: </label>
+            <input type="email" placeholder="Enter email address:" required/>
+            <br><br>
+            <label>Positions Available: </label>
+            <input type="radio" name="positions"/>
+            <label>Junior Developer</label>
+            <input type="radio" name="positions"/>
+            <label>Mid-level Developer</label>
+            <input type="radio" name="positions"/>
+            <label>Senior Developer</label>
+            <br><br>
+            <label>Programming Languages: </label>
+            <input type="checkbox"/>
+            <label>Java</label>
+            <input type="checkbox"/>
+            <label>JavaScript</label>
+            <input type="checkbox"/>
+            <label>Python</label>
+            <br><br>
+            <label>Password: </label>
+            <input type="password" placeholder="Enter password:" minlength="5" maxlength="8" required/>
+            <label>Confirm Password: </label>
+            <input type="password" placeholder="Confirm password:" minlength="5" maxlength="8" required/>
+            <br><br>
+            <input type="submit"/>
+            <input type="reset"/>
+        </form>
+    </body>
+</html>

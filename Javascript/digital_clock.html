@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <link rel="stylesheet" href="digital_clock.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Figtree:ital,wght@0,300..900;1,300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nothing+You+Could+Do&family=Orbitron:wght@400..900&family=Playwrite+AU+QLD:wght@100..400&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+</head>
+<body>
+    <div class="container">
+        <h1>Digital clock</h1>
+    <div class="child">
+        <div class="hours"></div>
+        <div class="minutes"></div>
+        <div class="seconds"></div>
+        <!-- <div class="milli"></div> -->
+    </div>
+
+    <div class="buttons">
+        <div class="stop">Stop</div>
+        <div class="start">Start</div>
+        <div class="restart">Restart</div>
+    </div>
+    </div>
+
+    <script>
+        //setTimeout(function(){
+        //    console.log("Responding");
+        //},1000);
+        var time = 300;
+        interval = null;
+        updateClock();
+        
+        function updateClock(){
+           // time = time - 1;
+            var hour = document.getElementsByClassName("hours")[0].innerHTML = parseInt(time/3600);
+            var min = document.getElementsByClassName("minutes")[0].innerHTML = parseInt((time % 3600) / 60);
+            var sec = document.getElementsByClassName("seconds")[0].innerHTML = time % 60;
+         //   var milli = document.getElementsByClassName("milli")[0].innerHTML = time;
+            
+        }
+        function startTimer(){
+            if(interval!=null) return;
+            interval = setInterval(function(){
+                if (time <= 0) {
+                    clearInterval(interval);
+                    interval = null;
+                    alert("Time up!");
+                    return;
+                }
+                time = time-1
+                updateClock();
+            },1000);
+            
+        }
+        document.querySelector(".start").addEventListener("click", startTimer);
+
+        document.querySelector(".stop").addEventListener("click", function(){
+            clearInterval(interval);
+            interval = null;
+        });
+        document.querySelector(".restart").addEventListener("click",function(){
+            clearInterval(interval);
+           // interval=0
+            interval=null;
+            time=300;
+            updateClock();
+        })
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

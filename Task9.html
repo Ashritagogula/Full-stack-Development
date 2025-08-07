@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <title>Task 9</title>
+    </head>
+    <body>
+        <h1>Travel reservation form</h1>
+        <h3>* denotes mandatory</h3>
+        <br>
+        <form>
+            <table>
+                <tr>
+                    <td><label>Full name* : </label></td>
+                    <td><input type="text" placeholder="FirstName LastName"></td>
+                </tr>
+                <tr>
+                    <td><label> address* : </label></td>
+                    <td><input type="email" placeholder="EMAIL_ADDRESS"></td>
+                </tr>
+                <tr>
+                    <td><label>Select Tour Package* :</label></td>
+                    <td>
+                        <select>
+                            <option>--Select--</option>
+                            <option>Himalayas</option>
+                            <option selected>Goa</option>
+                            <option>Kerala</option>
+                            <option>Andaman</option>
+                        </select>
+                </tr>
+                <tr>
+                    <td><label>Arrival Date* : </label></td>
+                    <td><input type="text" placeholder="m/d/y"></td>
+                </tr>
+                <tr>
+                    <td><label>Number of persons* : </label></td>
+                    <td><input type="text" placeholder="UNKNOWN_TYPE" /></td>
+                </tr>
+                <tr>
+                    <td><label>Which would you want to avail?* </label></td>
+                    <td>
+                        <input type="radio" name="transportation" >Boarding<br>
+                        <input type="radio" name="transportation" >Fooding<br>
+                        <input type="radio" name="transportation" >Sight seeing<br>
+                        <input type="radio" name="transportation" >Discount Coupon code: <br>
+                        <input type="text" placeholder="UNKNOWN_TYPE" />
+                    </td>
+                </tr>
+                <tr>
+                    <td><label>Terms and conditions* </label></td>
+                    <td>
+                        <input type="radio" name="terms" >I agree<br>
+                        <input type="radio" name="terms" >I disagree<br>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="Complete reservation" /></td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>

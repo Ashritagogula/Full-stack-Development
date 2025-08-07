@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D</title>
+    <style>
+       /* .one,.two{
+            height: 100px;
+            width: 100px;
+            background-color: rgb(167, 216, 188);   
+            margin: 10px;   
+        }
+        .one:hover{
+            transform: rotateX(50deg);
+            background-color: rgb(24, 124, 167);
+        }
+
+        .two:hover{
+            transform: rotateY(50deg);
+            background-color: rgb(24, 124, 167);
+        }*/
+
+        body{
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .parent{
+            transform-style: preserve-3d;
+            perspective: 100px;
+        }
+
+        .child1{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            transform: rotateY(30deg);
+            margin: 330px;
+            animation-name: myani;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes myani {
+            0%{
+                transform: rotateY(0deg);
+            }
+            100%{
+                transform: rotateY(360deg);
+            }
+            
+        }
+
+        @keyframes myani1 {
+            0%{
+                transform: rotateX(0deg);
+            }
+            100%{
+                transform: rotateX(360deg);
+            }
+            
+        }
+
+        .child2{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            transform: rotateX(30deg);
+            animation-name: myani1;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            
+        }
+        .parent1{
+            transform-style: preserve-3d;
+            perspective: 100px;
+            perspective-origin: left;
+            height: 220px;
+            border: 1px solid white;
+        }
+
+
+        .child3{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            color: white;
+            text-align: justify;
+            padding: 10px;
+            transform: rotateX(10deg);
+            animation-name: myani;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            
+
+        }
+    </style>
+</head>
+<body>
+    <!-- <section class="first">
+    <div class="one"></div>
+    <div class="two"></div>
+    <div class="3D"></div>
+</section> -->
+     <section class="second">
+        <div class="parent">
+            <div class="child1">
+                It is a long established fact that a reader will be distracted by the readable content of a page when looking at its
+                layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using
+                'Content here, content here', making it look like readable English. 
+            </div>
+            <div class="child2">
+                It is a long established fact that a reader will be distracted by the readable content of a page when looking at its
+                layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to
+                using.
+            </div>
+            
+        </div>
+        <div class="parent1">
+            <div class="child3">
+                Hey this is ashrita.
+            </div>
+        </div>
+     </section>
+    
+</body>
+</html>

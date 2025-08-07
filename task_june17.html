@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Box Room Lines</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            background: white;
+        }
+
+        .container {
+            height: 100vh;
+            width: 100vw;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box {
+            width: 449px;
+            height: 260px;
+            background-color: white;
+            box-shadow: 0px 0px 25px rgba(39, 26, 26, 0.884); /* Inner shadow */
+            position: relative;
+            z-index: 2;
+        }
+
+        .line {
+            position: absolute;
+            height: 3px;
+            width: 100vw;
+            background: linear-gradient(to right, rgba(44, 42, 42, 0.636), rgba(125, 123, 123, 0.986));
+            box-shadow:
+                0 0px 6px rgba(51, 48, 48, 0.963),
+                0 0px 10px rgba(0, 0, 0, 0.25),
+                0 0 25px rgba(23, 22, 22, 0.855);
+            border-radius: 2px;
+            z-index: 1;
+        }
+
+        /* Top-left to screen corner */
+        .tl {
+            top: 50%;
+            left: 50%;
+            transform-origin: top left;
+            transform: translate(-225px, -130px) rotate(-160deg);
+        }
+
+        /* Top-right to screen corner */
+        .tr {
+            top: 50%;
+            left: 50%;
+            transform-origin: top left;
+            transform: translate(225px, -130px) rotate(-20deg);
+        }
+
+        /* Bottom-left to screen corner */
+        .bl {
+            top: 50%;
+            left: 50%;
+            transform-origin: top left;
+            transform: translate(-225px, 130px) rotate(160deg);
+        }
+
+        /* Bottom-right to screen corner */
+        .br {
+            top: 50%;
+            left: 50%;
+            transform-origin: top left;
+            transform: translate(225px, 130px) rotate(20deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Glowing Glassy Lines -->
+        <div class="line tl"></div>
+        <div class="line tr"></div>
+        <div class="line bl"></div>
+        <div class="line br"></div>
+
+        <!-- Main Box -->
+        <div class="box"></div>
+    </div>
+</body>
+
+</html>

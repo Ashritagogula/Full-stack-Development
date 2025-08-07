@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rubik's cube</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100svh;
+            background-color: black;
+            perspective: 400px;
+
+        }
+        .cube {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            transform-style: preserve-3d;
+            animation: myanimation 8s infinite linear;
+        }
+
+        @keyframes myanimation {
+            100% {
+                transform: rotateX(360deg) rotateY(360deg);
+            }
+        }
+        .left {
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            transform: rotateY(90deg) translateZ(100px);
+            background-color: #FFA500;
+            display: grid;
+            grid-template-rows: repeat(3,3fr);
+            grid-template-columns: repeat(3,3fr);
+        }
+
+        .right {
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            transform: rotateY(90deg) translateZ(-100px);
+            background-color: red;
+            display: grid;
+            grid-template-rows: repeat(3,3fr);
+            grid-template-columns: repeat(3,3fr);
+        }
+
+        .top {
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            transform: translateZ(100px);
+            background-color: #ffffff;
+            display: grid;
+            grid-template-rows: repeat(3,3fr);
+            grid-template-columns: repeat(3,3fr);
+        }
+
+        .bottom {
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            transform: translateZ(-100px);
+            background-color: yellow;
+            display: grid;
+            grid-template-rows: repeat(3,3fr);
+            grid-template-columns: repeat(3,3fr);
+        }
+
+        
+        .front { 
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            background-color: green;
+            transform: rotateX(90deg) translateZ(100px);
+            display: grid;
+            grid-template-rows: repeat(3,3fr);
+            grid-template-columns: repeat(3,3fr);
+        }
+
+        .back {
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            background-color: #06728b;
+            transform: rotateX(90deg) translateZ(-100px);
+            display: grid;
+            grid-template-rows: repeat(3,3fr);
+            grid-template-columns: repeat(3,3fr);
+        }
+
+        .left1, .right1 , .top1 ,.bottom1, .front1, .back1{
+            border-radius: 18px;
+            border: 1px solid black;
+            box-shadow: 0px 0px 3px rgb(0, 0, 0); 
+            border-radius: 0 10px 10px 0;         
+        }
+
+        .left2, .right2 , .top2 ,.bottom2, .front2, .back2{
+            border-radius: 18px;
+            border: 1px solid black;
+            box-shadow: 0px 0px 3px rgb(0, 0, 0); 
+            background-color: #06728b;
+        }
+        
+
+        .left3, .right3 , .top3 ,.bottom3, .front3, .back3{
+            border-radius: 18px;
+            border: 1px solid black;
+            box-shadow: 0px 0px 3px rgb(0, 0, 0); 
+            border-radius: 10px 0 0  10px;       
+        }
+        .left22, .right22 , .top22 ,.bottom22, .front22, .back22{
+            border-radius: 18px;
+            border: 1px solid black;
+            box-shadow: 0px 0px 3px rgb(0, 0, 0); 
+            border-radius: 0  0px 10px 10px ;
+        }
+
+        .left12, .right12 , .top12 ,.bottom12, .front12, .back12{
+            border-radius: 18px;
+            border: 1px solid black;
+            box-shadow: 0px 0px 3px rgb(0, 0, 0); 
+            border-radius: 10px 10px 0  0px  ;
+        }
+
+        .left4, .right4 , .top4 ,.bottom4, .front4, .back4{
+            border-radius: 18px;
+            border: 1px solid black;
+            box-shadow: 0px 0px 3px rgb(0, 0, 0); 
+            border-radius: 10px 10px 10px  10px;       
+        }
+    
+        .left, .right, .top, .bottom , .front ,.back{
+            opacity: 0.9;
+            /*border: 90px solid rgba(0, 0, 0, 0.179);*/
+            
+        }
+
+        .left1:hover,
+        .right1:hover,
+        .top1:hover,
+        .bottom1:hover,
+        .front1:hover,
+        .back1:hover {
+            box-shadow: 0 0 9px rgba(0, 0, 0, 0.7);
+            
+            
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="cube">
+        <div class="left">
+            <div class="left1"></div>
+            <div class="left22"></div>
+            <div class="left3"></div>
+            <div class="left1"></div>
+            <div class="left4"></div>
+            <div class="left3"></div>
+            <div class="left1"></div>
+            <div class="left12"></div>
+            <div class="left3"></div>
+        </div>
+        <div class="right">
+            <div class="right1"></div>
+            <div class="right22"></div>
+            <div class="right3"></div>
+            <div class="right1"></div>
+            <div class="right4"></div>
+            <div class="right3"></div>
+            <div class="right1"></div>
+            <div class="right12"></div>
+            <div class="right3"></div>
+        </div>
+        <div class="top">
+            <div class="top1"></div>
+            <div class="top22"></div>
+            <div class="top3"></div>
+            <div class="top1"></div>
+            <div class="top4"></div>
+            <div class="top3"></div>
+            <div class="top1"></div>
+            <div class="top12"></div>
+            <div class="top3"></div>
+        </div>
+        <div class="bottom">
+            <div class="bottom1"></div>
+            <div class="bottom22"></div>
+            <div class="bottom3"></div>
+            <div class="bottom1"></div>
+            <div class="bottom4"></div>
+            <div class="bottom3"></div>
+            <div class="bottom1"></div>
+            <div class="bottom12"></div>
+            <div class="bottom3"></div>
+
+        </div>
+        <div class="front">
+            <div class="front1"></div>
+            <div class="front22"></div>
+            <div class="front3"></div>
+            <div class="front1"></div>
+            <div class="front4"></div>
+            <div class="front3"></div>
+            <div class="front1"></div>
+            <div class="front12"></div>
+            <div class="front3"></div>
+        </div>
+        <div class="back">
+            <div class="back1"></div>
+            <div class="back22"></div>
+            <div class="back3"></div>
+            <div class="back1"></div>
+            <div class="back4"></div>
+            <div class="back3"></div>
+            <div class="back1"></div>
+            <div class="back12"></div>
+            <div class="back3"></div>
+        </div>
+
+    </div>
+    
+</body>
+
+</html>

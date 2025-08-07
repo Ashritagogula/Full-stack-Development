@@ -1,0 +1,65 @@
+.gradient1{
+    background: linear-gradient(45deg, #ee6b99, #471b1b);
+    height: 300px;
+    width: 300px;
+    text-align: center;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gradient2{
+    background-image: radial-gradient(circle, #ee6b99, #362415);
+    height: 300px;
+    width: 300px;
+    text-align: center;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gradient3{
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    background-image: repeating-linear-gradient(45deg, #ee6b99 5%, #471b1b);
+    height: 300px;
+    width: 300px;
+    text-align: center;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

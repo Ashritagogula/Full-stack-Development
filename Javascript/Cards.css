@@ -1,0 +1,29 @@
+.card-container{
+    width: 100%;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.card{
+    width: 300px;
+    height: 400px;
+    display: flex;
+    border: 1px solid black;
+    /* flex-wrap: wrap; */
+    align-items: center;
+    flex-direction: column;
+    padding-top: 10px;
+    border-radius: 10px;
+    font-size: 22px;
+
+}
+.image-section{
+    width: 250px;
+
+}
+
+.image-section img{
+    width: 100%;
+}

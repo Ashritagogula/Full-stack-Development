@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Level Unlock System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: #f9f9f9;
+            padding-top: 50px;
+        }
+
+        h1 {
+            margin-bottom: 40px;
+        }
+
+        .level {
+            margin: 20px auto;
+            padding: 20px;
+            width: 250px;
+            border-radius: 10px;
+            background-color: #e0e0e0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .level button {
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            border-radius: 6px;
+            color: white;
+            background-color: gray;
+            cursor: not-allowed;
+            transition: background 0.3s;
+        }
+
+        .level button.unlocked {
+            background-color: #4CAF50;
+            cursor: pointer;
+        }
+
+        .locked-text {
+            color: red;
+            font-size: 14px;
+            margin-top: 8px;
+        }
+
+        .unlocked-text {
+            color: green;
+            font-size: 14px;
+            margin-top: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>🧠 Coding Challenge Levels</h1>
+
+    <div class="level">
+        <h2>Easy Level</h2>
+        <button id="easyBtn" class="unlocked" onclick="completeLevel('easy')">Start Easy</button>
+        <div id="easyStatus" class="unlocked-text">Unlocked ✅</div>
+    </div>
+
+    <div class="level">
+        <h2>Medium Level</h2>
+        <button id="mediumBtn" onclick="completeLevel('medium')">Locked 🔒</button>
+        <div id="mediumStatus" class="locked-text">Locked</div>
+    </div>
+
+    <div class="level">
+        <h2>Hard Level</h2>
+        <button id="hardBtn" onclick="completeLevel('hard')">Locked 🔒</button>
+        <div id="hardStatus" class="locked-text">Locked</div>
+    </div>
+
+    <!-- Confetti JS -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+    <script>
+        let levelState = {
+            easy: true,
+            medium: false,
+            hard: false
+        };
+
+        //Contests
+        function completeLevel(level) {
+            confetti({ particleCount: 150, spread: 100, origin: { y: 0.6 } });
+
+            if (level === 'easy' && levelState.easy) {
+                alert("🎉 Easy Level Completed!");
+                unlock('medium');
+            } else if (level === 'medium' && levelState.medium) {
+                alert("🎉 Medium Level Completed!");
+                unlock('hard');
+            } else if (level === 'hard' && levelState.hard) {
+                alert("🎉 Hard Level Completed! You're a Pro!");
+            } else {
+                alert("🔒 This level is still locked!");
+            }
+        }
+
+        function unlock(nextLevel) {
+            levelState[nextLevel] = true;
+            document.getElementById(nextLevel + 'Btn').classList.add('unlocked');
+            document.getElementById(nextLevel + 'Btn').disabled = false;
+            document.getElementById(nextLevel + 'Btn').innerText = "Start " + capitalize(nextLevel);
+            document.getElementById(nextLevel + 'Btn').style.cursor = "pointer";
+            document.getElementById(nextLevel + 'Status').innerText = "Unlocked ✅";
+            document.getElementById(nextLevel + 'Status').classList.remove('locked-text');
+            document.getElementById(nextLevel + 'Status').classList.add('unlocked-text');
+        }
+
+        function capitalize(word) {
+            return word.charAt(0).toUpperCase() + word.slice(1);
+        }
+
+        // Disable locked buttons initially
+        document.getElementById('mediumBtn').disabled = true;
+        document.getElementById('hardBtn').disabled = true;
+    </script>
+
+</body>
+
+</html>

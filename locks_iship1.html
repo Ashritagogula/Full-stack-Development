@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz Unlock Levels</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            padding: 20px;
+            background: #f0f0f5;
+        }
+
+        .level {
+            border: 2px solid #aaa;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            background: white;
+        }
+
+        .level.locked {
+            opacity: 0.5;
+            pointer-events: none;
+        }
+
+        .question {
+            margin-bottom: 10px;
+        }
+
+        .question input {
+            margin-left: 5px;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .unlocked {
+            color: green;
+            font-weight: bold;
+        }
+
+        #confetti-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            pointer-events: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>🚀 Skill Challenge Levels</h1>
+
+    <canvas id="confetti-canvas"></canvas>
+
+    <div id="easy" class="level">
+        <h2>🟢 Easy Level</h2>
+        <div class="question"><label>2 + 2 = <input data-answer="4"></label></div>
+        <div class="question"><label>3 + 1 = <input data-answer="4"></label></div>
+        <button onclick="checkAnswers('easy', 'medium')">Submit Easy</button>
+    </div>
+
+    <div id="medium" class="level locked">
+        <h2>🟡 Medium Level</h2>
+        <div class="question"><label>10 - 4 = <input data-answer="6"></label></div>
+        <div class="question"><label>5 * 2 = <input data-answer="10"></label></div>
+        <button onclick="checkAnswers('medium', 'hard')">Submit Medium</button>
+    </div>
+
+    <div id="hard" class="level locked">
+        <h2>🔴 Hard Level</h2>
+        <div class="question"><label>12 / 3 = <input data-answer="4"></label></div>
+        <div class="question"><label>15 - 7 = <input data-answer="8"></label></div>
+        <button onclick="checkAnswers('hard')">Submit Hard</button>
+    </div>
+
+    <script>
+        function checkAnswers(currentId, nextId = null) {
+            const currentLevel = document.getElementById(currentId);
+            const inputs = currentLevel.querySelectorAll('input');
+            let allCorrect = true;
+
+            inputs.forEach(input => {
+                if (input.value !== input.dataset.answer) {
+                    allCorrect = false;
+                    input.style.borderColor = "red";
+                } else {
+                    input.style.borderColor = "green";
+                }
+            });
+
+            if (allCorrect) {
+                alert(`🎉 ${currentId.toUpperCase()} Level Completed!`);
+                triggerConfetti();
+                if (nextId) {
+                    document.getElementById(nextId).classList.remove('locked');
+                }
+            } else {
+                alert("Please check your answers again!");
+            }
+        }
+
+        // ---- Confetti Effect ----
+        const canvas = document.getElementById('confetti-canvas');
+        const ctx = canvas.getContext('2d');
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        let confettis = [];
+
+        function Confetti() {
+            this.x = Math.random() * canvas.width;
+            this.y = Math.random() * canvas.height - canvas.height;
+            this.size = Math.random() * 6 + 4;
+            this.speed = Math.random() * 3 + 2;
+            this.color = `hsl(${Math.random() * 360}, 100%, 50%)`;
+
+            this.update = function () {
+                this.y += this.speed;
+                if (this.y > canvas.height) {
+                    this.y = -10;
+                    this.x = Math.random() * canvas.width;
+                }
+            };
+
+            this.draw = function () {
+                ctx.fillStyle = this.color;
+                ctx.fillRect(this.x, this.y, this.size, this.size);
+            };
+        }
+
+        function triggerConfetti() {
+            confettis = [];
+            for (let i = 0; i < 100; i++) confettis.push(new Confetti());
+
+            let frame = 0;
+            function animate() {
+                frame++;
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                confettis.forEach(c => {
+                    c.update();
+                    c.draw();
+                });
+                if (frame < 100) requestAnimationFrame(animate);
+            }
+            animate();
+        }
+    </script>
+
+</body>
+
+</html>

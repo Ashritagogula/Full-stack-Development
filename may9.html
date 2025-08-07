@@ -1,0 +1,137 @@
+<html>
+    <head>
+        <title>Forms</title>
+    </head>
+    <body>
+        <form>
+        <p>With Label &nbsp; &nbsp;  With Placeholder</p>
+
+        <label>Enter username: </label>
+        <input type="text" placeholder="Enter username: "/>
+
+        <br><br>
+
+        <label>Enter password: </label>
+        <input type="password" placeholder="Enter password:"/>
+
+        <br><br>
+
+        <label>Enter Number: </label>
+        <input type="number" placeholder="Enter Number:"/>
+
+        <br><br>
+
+        <label>Enter Email: </label>
+        <input type="email" placeholder="Enter Email:"/>
+
+        <br><br>
+
+        <label>Enter Date: </label>
+        <input type="date" placeholder="Enter Date:"/>
+
+        <br><br>
+
+        <label>Enter Time: </label>
+        <input type="time" placeholder="Enter Time:"/>
+
+        <br><br>
+
+        <label>Enter URL: </label>
+        <input type="url" placeholder="Enter URL:"/>
+
+        <br><br>
+
+        <label>Enter Search: </label>
+        <input type="search" placeholder="Enter Search:"/>
+
+        <br><br>
+
+        <label>Enter Tel: </label>
+        <input type="tel" placeholder="Enter Tel:"/>
+
+        <br><br>
+        
+        <label>Enter Color: </label>
+        <input type="color" placeholder="Enter Color:"/>
+
+        <br><br>
+
+        <label>Enter Range: </label>
+        <input type="range" placeholder="Enter Range:"/>
+
+        <br><br>
+
+        <label>Enter Month: </label>
+        <input type="month" placeholder="Enter Month:"/>
+
+        <br><br>
+
+        <label>Enter Week: </label>
+        <input type="week" placeholder="Enter Week:"/>
+
+        <br><br>
+
+        <label>Enter Radio: </label>
+        <input type="radio" name="Gender">
+        <label>Male</label>
+        <input type="radio" name="Gender">
+        <label>Female</label>
+        <input type="radio" name="Gender">
+        <label>Other</label>
+
+        <br><br>
+
+        <label>Enter Checkbox: </label>
+        <input type="checkbox"/>
+        <label>C</label>
+        <input type="checkbox"/>
+        <label>C++</label>
+        <input type="checkbox"/>
+        <label>Java</label>
+        <input type="checkbox"/>
+        <label>Python</label>
+        <input type="checkbox"/>
+        <label>JavaScript</label>
+
+      <br><br>
+ 
+        <label>Choose file: </label>
+        <input type="file"/>
+
+        <label>Choose files: </label>
+        <input type="file" multiple>
+        <br><br>
+        <textarea></textarea>
+        <br><br>
+        <h1>Validations</h1>
+
+        <input type="text" placeholder="Enter username max 10" maxlength="10" required>
+        <input type="text" placeholder="Enter username min 1" minlength="2">
+        <br><br>
+        <input type="number" placeholder="Enter number" min="100" max="1000">
+        <br><br>
+        <input type="password" placeholder="Enter Password" minlength="5" maxlength="8" required>
+        <br><br>
+        <input type="range" min="0" max="100" onchange="fun(event)">
+        <br><br>
+        <select>
+            <option disabled>Choose Fruit</option>
+            <option>Apple</option>
+            <option>Banana</option>
+            <!-- <option selected>Banana</option> -->
+            <option>Mango</option>
+            <option disabled>Grape</option>
+        </select>
+        <br><br>
+        
+        <input type="submit">
+        <br><br>
+        <input type="reset">
+        </form>
+        <script>
+            function fun(event){
+                console.log(event.target.value);
+            }
+        </script>
+    </body>
+</html>

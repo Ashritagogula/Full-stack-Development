@@ -1,0 +1,605 @@
+body {
+    margin: 0;
+    height: 100svh;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    overflow-x: hidden;
+}
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    overflow-x: hidden; }
+header {
+    padding: 10px 2px;
+    font-family: "Comfortaa", sans-serif;
+    background-color: #0084ff;
+    color: white;
+}
+
+.icon i {
+    font-size: 20px;
+    padding: 15px;
+    position: relative;
+}
+
+.head {
+    flex-wrap: wrap;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.container {
+    padding: 30px;
+    display: flex;
+    margin-top: 30px;
+    flex-direction: column;
+}
+
+.row1 {
+    display: flex;
+    overflow: hidden;
+}
+
+.grid1 {
+    width: 1625px;
+    background-color: #b8dcff;
+}
+
+.grid2 {
+    width: 800px;
+    background-color: #c9efda;
+}
+
+.grid1,
+.grid2,
+.grid3,
+.grid4,
+.grid5 {
+    width: 100%;
+    max-width: 100%;
+}
+
+.grid1,
+.grid2 {
+    height: 300px;
+    border-radius: 15px;
+    margin: 8px;
+}
+
+.row2 {
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.grid3,
+.grid4,
+.grid5 {
+    margin: 8px;
+    width: 500px;
+    height: 300px;
+    border-radius: 15px;
+}
+
+.grid3 {
+    background-color: #fdd1d0;
+}
+
+.grid4 {
+    background-color: #fee6c2;
+}
+
+.grid5 {
+    background-color: #d4d3f5;
+}
+
+.grid-content {
+    padding: 30px;
+    width: 50%;
+    float: left;
+}
+
+.grid-image {
+    float: right;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.grid-image img {
+    max-height: 240px;
+    max-width: 100%;
+}
+
+.phone{
+    transform: scale(1.2);
+    position: relative;
+    top: 6px;
+}
+
+.web{
+    width: 120px;
+    height: 90px;
+}
+.grid-center {
+    text-align: center;
+    padding: 30px;
+}
+
+.icon-large {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.title-blue {
+    color: #007bff;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.title-green {
+    color: #79b396;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.title-red {
+    color: #fe8a8a;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.title-orange {
+    color: #fdc16a;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.title-purple {
+    color: #755bd8;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.desc1 {
+    font-size: 14px;
+    margin: 10px 0;
+    color: #7c4f48;
+}
+.desc2 {
+    font-size: 14px;
+    margin: 10px 0;
+    color: #5694d0;
+}
+.desc3 {
+    font-size: 14px;
+    margin: 10px 0;
+    color: #4a7161;
+}
+.app-store {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 18px;
+    border: none;
+    border-radius:10px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-weight: bold;
+}
+.clean{
+    width: 120px;
+}
+
+.testimonials h4{
+    font-family: "Comfortaa", sans-serif;
+}
+.app-store i {
+    margin-right: 6px;
+}
+
+.credit {
+    text-align: center;
+    margin-top: 20px;
+    color: gray;
+    font-size: 0.9rem;
+}
+
+.services {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 60px 20px;
+    background-color: #9591e5;
+}
+
+
+
+.testimonials {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.testimonials h2 {
+    color: #9591e5;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.testimonials h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.testimonials h6 {
+    max-width: 700px;
+    padding:  0 0 14px 390px ;
+    font-size: 19px;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+.testimonial-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.testimonial-card img {
+    border-radius: 50%;
+    height: 100px;
+    background-size: cover;
+    width: 180px;
+}
+
+.testimonial-card h4 {
+    margin: 10px 0 0;
+    color: #444;
+}
+
+.pink {
+    background-color: #ffc6cc;
+}
+
+.yellow {
+    background-color: #ffe4b3;
+}
+
+.green {
+    background-color: #b3f0c6;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.benefits {
+    background-color: #9591e5;
+    padding: 50px 20px;
+}
+
+.benefit-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:end;
+    align-items:end;
+    gap: 30px;
+    line-height: 29px;
+
+}
+
+.benefit-box {
+    background-color: #f4f0ff;
+    width: 300px;
+    max-width: 100%;
+    flex: 1 1 300px;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+@media (max-width: 768px) {
+    .benefit-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .benefit-box {
+        width: 90%;
+    }
+}
+
+.benefits h2{
+    color: white;
+    font-size: 30px;
+    margin-bottom: 50px;
+}
+
+.benefit-box h3 {
+    color: #9591e5;
+    font-size: 80px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.benefit-box h5{
+    color: #9591e5;
+    font-size: 18px;
+    bottom: 6px;
+}
+
+.benefit-box p {
+    margin: 5px;
+}
+
+.benefit-box .desc {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 10px;
+}
+
+.benefit-box button {
+    margin-top: 10px;
+    padding: 16px 46px;
+    border: 1px solid white;
+    font-weight: bold;
+    background-color: #9675f5;
+    color: white;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-bottom: 50px;
+
+}
+
+.pricing {
+    text-align: center;
+    background-color: #9591e5;
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pricing h1 {
+    color: #ffbb00;
+    font-size: 76px;
+    margin: 10px 0;
+}
+
+.pricing h2 {
+    color: white;
+    font-size: 30px;
+}
+
+.pricing span {
+    text-decoration: underline;
+}
+
+.pricing p {
+    max-width: 600px;
+    margin: 0 40px 30px;
+    color: white;
+}
+
+.pricing button {
+    padding: 22px 78px;
+    background-color: #ffffff;
+    color: #9591e5;
+    border: none;
+    border-radius: 120px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.footer {
+    background-color: #2d2d2d;
+    color: #ddd;
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 0.9rem;
+}
+
+.ftr1 {
+    margin-top: 80px;
+}
+
+.ftr1 a {
+    color: #9591e5;
+}
+
+.parent{
+    margin: 0 70px;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.rightcard button{
+    background-color: #9591e5;
+    color: white;
+    border-radius: 7px;
+    border: 1px solid white;
+    font-weight: bold;
+    margin: 10px 0;
+    padding: 10px 50px 10px 50px;
+}
+.later{
+
+    background-color: white;
+}
+.leftcard h1{
+    margin: 50px;
+    font-size: 40px;
+    color: #9591e5;
+}
+
+
+@media (max-width: 500px) {
+    .thirdpara p {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+.right{
+    height: 200px;
+    width: 200px;
+    background-size: cover;
+    border-radius: 50%;
+}
+
+.rightcard{
+    margin: 50px;
+    overflow: hidden;
+    padding: 0px 0px 0px 60px;
+    display: block;
+}
+
+.thirdpara{
+    margin-top: 30px;
+}
+.rightcard p{
+    line-height: 16px;
+    font-weight: bold;
+    color: #9591e5;
+    font-size: 25px;
+}
+
+.firstpara, .secondpara{
+    margin: 50px;
+    line-height: 18px;
+}
+
+.firstpara{
+    margin-top: -25px;
+}
+
+@media (max-width: 768px) {
+
+    .menu {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .container {
+        padding: 15px;
+        margin-top: 10px;
+    }
+
+    .row1,
+    .row2 {
+        flex-direction: column;
+    }
+
+    .grid1,
+    .grid2,
+    .grid3,
+    .grid4,
+    .grid5 {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .grid-content,
+    .grid-image {
+        width: 100%;
+        float: none;
+        padding: 15px;
+    }
+
+    .grid-image img {
+        max-height: 180px;
+    }
+
+    .services,
+    .benefit-cards {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .testimonial-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .testimonial-card img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .testimonials h6 {
+        padding: 0;
+    }
+
+    .pricing h1 {
+        font-size: 40px;
+    }
+
+    .pricing button {
+        padding: 12px 30px;
+    }
+
+    .parent {
+        flex-direction: column;
+        margin: 20px;
+    }
+
+    .rightcard {
+        padding: 0 20px;
+    }
+
+    .rightcard button {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .leftcard h1 {
+        font-size: 28px;
+        margin: 20px;
+    }
+
+    .firstpara,
+    .secondpara,
+    .thirdpara {
+        margin: 20px;
+        font-size: 15px;
+    }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+}
+
+.card1{
+    position: relative;
+    padding-top: 220px;
+}
