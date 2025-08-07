@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Combinators and Pseudo-Classes - Explained</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.7;
+            background-color: #f8fcff;
+            padding: 20px;
+        }
+
+        h1,
+        h2 {
+            color: #1a4d6b;
+        }
+
+        .note {
+            background-color: #e0f7fa;
+            border-left: 5px solid #00acc1;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        code {
+            background-color: #fce4ec;
+            padding: 2px 5px;
+            border-radius: 5px;
+        }
+
+        .example-box {
+            background-color: #fff3e0;
+            border: 1px dashed #ff9800;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        ul {
+            margin-left: 20px;
+        }
+
+        .hover-box:hover {
+            background-color: #b3e5fc;
+        }
+
+        .click-me:active {
+            background-color: #4caf50;
+            color: white;
+        }
+
+        input:focus {
+            background-color: #fff8dc;
+            border: 2px solid blue;
+        }
+
+        .list li:nth-child(even) {
+            color: #e53935;
+        }
+
+        .highlighted:not(.skip) {
+            background-color: lightgreen;
+        }
+
+        .parent>.child {
+            color: blue;
+        }
+
+        .sibling~p {
+            color: purple;
+        }
+
+        .direct-next+p {
+            font-weight: bold;
+            color: darkorange;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>🧠 CSS Combinators & Pseudo-Classes (Real Life Explanation)</h1>
+
+    <hr />
+
+    <h2>🔗 1. CSS **Combinators**</h2>
+
+    <div class="note">
+        Combinators help define **relationships between HTML elements**, like parent-child or siblings. Think of it like
+        **family relations**!
+    </div>
+
+    <h3>1.1 <code>A B</code> → Descendant Selector</h3>
+    <p>Selects all B inside A, no matter how deep.</p>
+    <div class="example-box">
+        Think of it like: "All kids living inside a house A."
+    </div>
+    <pre><code>div p {
+  color: green;
+}</code></pre>
+
+    <h3>1.2 <code>A > B</code> → Child Selector</h3>
+    <p>Selects only the direct child B of A.</p>
+    <div class="example-box">
+        Real-life: "Only the children (not grandkids) of Parent A."
+    </div>
+    <pre><code>.parent > .child {
+  color: blue;
+}</code></pre>
+
+    <h3>1.3 <code>A + B</code> → Adjacent Sibling</h3>
+    <p>Selects element B that comes just **after A**.</p>
+    <div class="example-box">
+        Like: "A girl sitting right next to you in class."
+    </div>
+    <pre><code>.direct-next + p {
+  color: orange;
+}</code></pre>
+
+    <h3>1.4 <code>A ~ B</code> → General Sibling</h3>
+    <p>Selects all B that are siblings of A **and come after** it.</p>
+    <div class="example-box">
+        Like: "All younger siblings after an elder brother."
+    </div>
+    <pre><code>.sibling ~ p {
+  color: purple;
+}</code></pre>
+
+    <hr />
+
+    <h2>🎭 2. CSS **Pseudo-Classes**</h2>
+
+    <div class="note">
+        Pseudo-classes target an element based on its **state** or **position** (like when you hover, click, or focus).
+    </div>
+
+    <h3>2.1 <code>:hover</code> – When you hover</h3>
+    <div class="hover-box">Hover over this box</div>
+    <pre><code>.hover-box:hover {
+  background-color: skyblue;
+}</code></pre>
+
+    <h3>2.2 <code>:active</code> – When clicked</h3>
+    <button class="click-me">Click me!</button>
+    <pre><code>.click-me:active {
+  background: green;
+  color: white;
+}</code></pre>
+
+    <h3>2.3 <code>:focus</code> – Input selected</h3>
+    <input type="text" placeholder="Click me">
+    <pre><code>input:focus {
+  border: 2px solid blue;
+}</code></pre>
+
+    <h3>2.4 <code>:nth-child(n)</code> – Select by position</h3>
+    <ul class="list">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+    </ul>
+    <pre><code>.list li:nth-child(even) {
+  color: red;
+}</code></pre>
+
+    <h3>2.5 <code>:not(selector)</code> – Exclude something</h3>
+    <div class="highlighted">I will be green ✅</div>
+    <div class="highlighted skip">I will not be green ❌</div>
+    <pre><code>.highlighted:not(.skip) {
+  background-color: lightgre

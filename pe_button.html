@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100svh;
+        }
+        .demo, .demo6{
+            position: relative;
+            background-color: #1B3C53;
+            z-index: 1;
+            color: white;
+            height: 60px;
+            width: 140px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            border-radius: 10px;
+            border: 1px solid rgb(0, 0, 0);
+            box-shadow: 0 0 4px #1B3C53;
+            margin: 30px;
+
+        }
+
+        .demo::before{
+            content: "";
+            position: absolute;
+            z-index: 0;
+            background-color: #91C8E4;
+            width: 100%;
+            border: 1px solid black;
+            transform: translateX(-140px);
+            height: 100%;
+            transition: all 0.4s linear;
+            opacity: 0.4;
+            z-index: -1;
+        }
+
+        .demo:hover::before{
+            transform: translateX(0px);
+            
+        }
+
+        .demo1{
+            position: relative;
+            background-color: #1B3C53;
+            z-index: 1;
+            color: white;
+            height: 60px;
+            width: 140px;
+    
+            margin: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            border-radius: 10px;
+            border: 1px solid rgb(0, 0, 0);
+            box-shadow: 0 0 4px #1B3C53;
+        }
+
+        .demo1::before{
+            content: "";
+            position: absolute;
+            z-index: 0;
+            background-color: #91C8E4;
+            width: 100%;
+            border: 1px solid black;
+            transform: translateX(-140px) skew(40deg);
+            height: 100%;
+            transition: all 0.4s linear;
+            opacity: 0.4;
+            z-index: -1;
+        }
+
+        .demo1::after{
+            content: "";
+            position: absolute;
+            z-index: 0;
+            background-color: #91C8E4;
+            width: 100%;
+            border: 1px solid black;
+            transform: translateX(-140px) skewX(-120deg);
+            height: 100%;
+            transition: all 0.4s linear;
+            opacity: 0.4;
+            z-index: -1;
+        }
+
+        .demo1:hover::before{
+            transform: translateX(0px);
+        }
+
+        .demo1:hover::after{
+            transform: translateX(0px);
+        }
+
+        .demo2{
+            position: relative;
+            background-color: #ffffff;
+            z-index: 1;
+            color: rgb(0, 0, 0);
+            height: 60px;
+            width: 140px;
+            display: flex;
+            margin: 30px;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            border-radius: 10px;
+            border: 1px solid rgb(0, 0, 0);
+            box-shadow: 0 0 4px #1B3C53;
+        }
+
+        .demo2::before{
+            content: "";
+            position: absolute;
+            z-index: 0;
+            background-color: #7cb3ce;
+            width: 100%;
+            transform: translateX(-140px) skewX(-145deg);
+            height: 100%;
+            transition: all 0.8s linear;
+            opacity: 0.8;
+            z-index: -1;
+
+        }
+
+        .demo2:hover{
+            color: rgb(94, 11, 124);
+            font-size: 17px;
+        }
+
+        .demo2:hover::before{
+            transform: translateX(0px);
+        }
+
+        .demo2:hover::after{
+            transform: translate(0px);
+        }
+
+        .demo2::after{
+            content: "";
+            position: absolute;
+            z-index: 0;
+            background-color: #dba9dc;
+            width: 100%;
+            transform: translateX(140px) skewX(-145deg);
+            height: 100%;
+            transition: all 1s linear;
+            opacity: 0.8;
+            z-index: -1;
+        }
+
+        .demo3{
+            position: relative;
+            background-color: #ffffff;
+            z-index: 1;
+            color: rgb(0, 0, 0);
+            height: 60px;
+            width: 140px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+            overflow: hidden;
+            border-radius: 10px;
+            margin: 30px;
+            border: 1px solid rgb(0, 0, 0);
+            box-shadow: 0 0 4px #1B3C53;
+        }
+
+        .demo3::before{
+            content: "";
+            position: absolute;
+            z-index: 0;
+            background-color: #D1D8BE;
+            width: 100%;
+            transform: translateX(-140px) skewX(-140deg);
+            height: 100%;
+            transition: all 0.8s linear;
+            opacity: 0.8;
+            z-index: -1;
+
+        }
+
+        .demo3:hover::before{
+            transform: translateX(-70px) skew(-120deg);
+        }
+
+        .demo3:hover::after{
+            transform: translateX(70px) skew(-120deg);
+        }
+
+
+        .demo3::after{
+            content: "";
+            position: absolute;
+            z-index: 0;
+            background-color: #A7C1A8;
+            width: 100%;
+            transform: translateX(140px) skewX(-140deg);
+            height: 100%;
+            transition: all 0.8s linear;
+            opacity: 0.8;
+            z-index: -1;
+        }
+
+        .demo4{
+            position: relative;
+            background-color: #ffffff;
+            z-index: 1;
+            color: rgb(0, 0, 0);
+            height: 60px;
+            width: 140px;
+            display: flex;
+            margin: 30px;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+            overflow: hidden;
+            border-radius: 10px;
+            border: 1px solid rgb(0, 0, 0);
+            box-shadow: 0 0 4px #1B3C53;
+        }
+
+        .demo4::before{
+            content: "";
+            position: absolute;
+            z-index: 0;
+            background-color: #DA6C6C;
+            width: 100%;
+            transform: translateX(-140px);
+            height: 100%;
+            transition: all 0.8s linear;
+            opacity: 0.8;
+            z-index: -1;
+        }
+
+        .demo4::after{
+            content: "";
+            position: absolute;
+            z-index: 0;
+            background-color: #B6B09F;
+            width: 100%;
+            transform: translateX(140px);
+            height: 100%;
+            transition: all 0.8s linear;
+            opacity: 0.8;
+            z-index: -1;
+        }
+
+        .demo4:hover::before{
+            transform: translateX(-70px) ;
+        }
+
+        .demo4:hover::after{
+            transform: translateX(70px);
+        }
+
+
+        .demo5{
+            position: relative;
+            background-color: #b6c3e0;
+            z-index: 0;
+            color: rgb(0, 0, 0);
+            height: 60px;
+            width: 140px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 30px;
+            border-radius: 10px;
+            border: 1px solid rgb(0, 0, 0);
+            box-shadow: 0 0 4px #1B3C53;
+            
+
+        }
+
+        .demo5::before{
+            content: "";
+            position: absolute;
+            z-index: 1;
+            width: 100%;
+            transform: translateX(-140px);
+            height: 100%;
+            transition: all 0.8s linear;
+            opacity: 0.8;
+            z-index: -1;   
+        }
+
+        .style1 , .style2{
+            border: 1px solid black;
+            gap :20px;
+        }
+
+        .demo5::after{
+            content: "";
+            position: absolute;
+            background-image: linear-gradient(rgba(255, 255, 255, 0.321),black);
+            z-index: 2;
+            transition: all 0.8s linear;
+            opacity: 0.6;
+            
+            width: 35px;
+            height: 40px;
+            border-radius: 50%;
+            border: 2px solid black;
+            transform: translate(100px,30px);
+            left: 20px;
+            filter: blur(0.2px);
+        }
+        
+
+        .demo5:hover::before{
+            transform: translateX(0px) ;
+        }
+
+        .demo5:hover::after{
+            transform: translateY(-5px) ;
+            border-radius: 10px;
+            height: 70px;
+            width: 140px;
+            box-shadow: 0 0 10px black;
+            background-image: linear-gradient(rgba(255, 255, 255, 0.321),black);
+            border: 1px solid rgb(0, 0, 0);
+            opacity: 0.2;
+        }
+
+        .container{
+            display: flex;
+            flex-direction: row;
+            gap:30px;
+        }
+        
+        .demo6::before{
+            content: "";
+            position: absolute;
+            z-index: 0;
+            background-color: #91C8E4;
+            width: 100%;
+            border: 1px solid black;
+            transform: translateX(130px) skew(18deg);
+            height: 100%;
+            transition: all 0.5s linear;
+            opacity: 0.4;
+            z-index: -1;
+        }
+
+        .demo6::after{
+            content: "";
+            position: absolute;
+            z-index: 0;
+            background-color: #91C8E4;
+            width: 100%;
+            border: 1px solid black;
+            transform: translateX(-130px) skew(18deg);
+            height: 100%;
+            transition: all 0.4s linear;
+            opacity: 0.4;
+            z-index: -1;
+            
+
+        }
+
+        .demo6:hover::before{
+            transform: translateX(9px);
+            
+        }
+
+        .demo6:hover::after{
+            transform: translateX(9px);
+        }
+
+        .style3{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <div class="container">
+    <div class="style1">
+        <div class="demo">Click me</div>
+        <div class="demo1">Login</div>
+        <div class="demo6">Logout</div>
+    </div>
+
+    <div class="style2">
+        <div class="demo2">Logout</div>
+        <div class="demo3">Login</div>
+        <div class="demo4">Hello!</div>
+    </div>
+
+    </div>
+    <div class="style3">
+     <div class="demo5">Click here</div>
+    </div>
+
+</body>
+</html>

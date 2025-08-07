@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cube</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100svh;
+            background-color: black;
+            perspective: 600px;
+            
+        }
+
+        .cube{
+            position: relative;
+            width: 200px;
+            height: 200px;
+            transform-style: preserve-3d;
+            animation: myanimation 6s infinite linear;
+        }
+
+        .cube1{
+            position: relative;
+            width: 20px;
+            height: 20px;
+            margin-left: 240px;
+            transform-style: preserve-3d;
+            animation: myanimation 6s infinite linear;
+        }
+        
+        @keyframes myanimation {
+            100%{
+                transform: rotateX(360deg) rotateY(360deg);
+            }
+        }
+        .cube1 div{
+            width: 3px;
+            height: 230px;
+            position: absolute;
+            opacity: 0.6;
+        }
+
+        .cube1 div:hover{
+            background-color: rgba(255, 255, 255, 0.723);
+            
+        }
+        .cube div{
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            opacity: 0.6;
+        }
+
+        .cube div:hover{
+            background-color: rgba(255, 255, 255, 0.723);
+            
+        }
+
+        .left{
+            transform: rotateY(90deg) translateZ(100px);
+            background-color: #1B3C53;
+        }
+        .right{
+            transform: rotateY(90deg) translateZ(-100px);
+            background-color: #1B3C53;
+        }
+
+        .top{
+            transform: translateZ(100px);
+            background-color: #456882;
+        }
+
+        .bottom{
+            transform: translateZ(-100px);
+            background-color: #456882;
+        }
+
+        .front{
+            background-color: #8ab9c3;
+            transform: rotateX(90deg) translateZ(100px);
+        }
+
+        .back{
+            background-color: #8ab9c3;
+            transform: rotateX(90deg) translateZ(-100px);
+        }
+    </style>
+</head>
+<body>
+    <div class="cube">
+        <div class="left"></div>
+        <div class="right"></div>
+        <div class="top"></div>
+        <div class="bottom"></div>
+        <div class="front"></div>
+        <div class="back"></div>
+    </div>
+    <div class="cube1">
+        <div class="left"></div>
+        <div class="right"></div>
+        <div class="top"></div>
+        <div class="bottom"></div>
+        <div class="front"></div>
+        <div class="back"></div>
+    </div>
+    
+</body>
+</html>

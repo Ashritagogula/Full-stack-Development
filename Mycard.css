@@ -1,0 +1,88 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #e6e6fa, #d1c4e9);
+    font-family: 'Segoe UI', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.card {
+    display: flex;
+    background: linear-gradient(to right, #c7aedd, #ffffff);
+    border-radius: 25px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    max-width: 650px;
+    width: 90%;
+    overflow: hidden;
+    backdrop-filter: blur(5px);
+}
+
+.card-left {
+    flex: 1;
+    background: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+.profile-img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border: 10px solid #ffffff;
+    clip-path: polygon(25% 6.7%, 75% 6.7%,
+            100% 50%, 75% 93.3%,
+            25% 93.3%, 0% 50%);
+    background-color: #eee;
+}
+
+.card-right {
+    flex: 2;
+    padding: 40px 30px;
+    text-align: left;
+}
+
+h1 {
+    font-size: 28px;
+    margin: 0;
+    color: #4b0082;
+}
+
+.title {
+    font-size: 18px;
+    color: #6a5acd;
+    font-weight: bold;
+    margin: 10px 0 20px;
+    text-decoration: underline 1px solid #6a5acd;
+}
+
+.info p {
+    margin: 8px 0;
+    font-size: 15px;
+    color: #333;
+    line-height: 1.5;
+}
+
+.info i {
+    color: #6a5acd;
+    margin-right: 8px;
+}
+
+.social {
+    margin-top: 20px;
+}
+
+.social a {
+    text-decoration: none;
+    margin-right: 15px;
+    color: #6a5acd;
+    font-size: 22px;
+    transition: transform 0.2s;
+}
+

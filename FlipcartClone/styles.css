@@ -1,0 +1,331 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    flex-wrap: wrap;
+}
+
+.search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+.search i{
+    font-size: 19px;
+}
+
+.text{
+    font-size: 14px;
+    width: 600px;
+    padding: 6px;
+    height: 25px;
+    background-color: #f1f5ff;
+    font-family: "Nothing You Could Do", cursive;
+}
+
+/* .login span, .login i , .cart span, .seller span{
+    gap: 30px;
+} */
+
+.login, .cart, .seller,.menu{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 6px;
+}
+
+
+.container1{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: #f1f3f6;
+}
+
+.HairandSkin, .FashionTopDeals, .image{
+    background-color: #ffffff;
+   
+    display: flex;
+    border: 1px solid black;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    margin: 10px 0;
+}
+
+.greater h3{
+    margin-right: 25px;
+    border-radius: 50%;
+    background-color: #3d57c4;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+
+.grid1 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 20px;
+}
+
+.grid1 .box1,
+.grid1 .box2,
+.grid1 .box3,
+.grid1 .box4 {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+}
+
+.images{
+    display: flex;
+    flex-direction: column;
+}
+
+.innercontainer{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border: 1px solid black;
+    margin: 15px 10px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+.innercontainer h4{
+    font-size: 18px;
+    position: relative;
+    left: 30px;
+}
+
+.container2{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+.leftpart{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+    flex-wrap: wrap;
+
+
+}
+.fashwash{
+    height: 150px;
+    width: 130px;
+}
+
+.rightimage{
+   height: 500px;
+   width: 500px;
+}
+
+.Medium{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
+    gap: 10px;
+    background-color: #f1f3f6;
+    
+}
+
+.one, .two, .three{
+    flex: 1;
+    margin: 10px;
+    
+}
+
+.head{
+    display: flex;
+    padding-left: 30px;
+    align-items: center;
+    
+    background-color: rgb(255, 255, 255);
+    justify-content: space-between;
+
+}
+
+.circle{
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 10px;
+    background-color: #3d57c4;
+    border: 1px solid black;
+    border-radius: 50%;
+    margin-right: 40px;
+}
+
+.gridsystem{
+    display: grid;
+    gap: 30px;
+    padding: 10px;
+    background-color: #ffffff;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.gridsystem .box1, .gridsystem .box2, .gridsystem .box3, .gridsystem .box4{
+    border: 1px solid #ccc;
+}
+
+.fash{
+    width: 140px;
+    height: 140px;
+    margin-top: 20px;
+    background-size: cover;
+}
+.box1, .box2, .box3, .box4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.right {
+    max-width: 100%;
+    height:  680px;
+    width: 100%;
+    background-size: cover;
+    display: block;
+    margin: 0 auto;
+}
+
+@media (max-width: 1237px) {
+    .search{
+        width: 400px;
+
+    }
+}
+
+@media (max-width: 1024px) {
+    .text {
+        width: 400px;
+    }
+
+    .search{
+        width: 300px;
+    }
+
+    .gridsystem {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .Medium {
+        flex-direction: column;
+    }
+
+    .one,
+    .two,
+    .three {
+        width: 100%;
+    }
+
+    .right {
+        width: 93%;
+        height:700px;
+    }
+
+    .head {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        
+    }
+}
+@media (max-width: 1450) {
+    .gridsystem h5{
+        font-size: 40px;
+    }
+    
+}
+@media (max-width: 600px) {
+    .text {
+        width: 100%;
+    }
+
+    .gridsystem {
+        grid-template-columns: 1fr;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .search {
+        width: 100%;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .login,
+    .cart,
+    .seller,
+    .menu {
+        margin: 10px 0;
+    }
+}
+
+.gridsystem h5{
+    position: relative;
+    right: 50px;
+    font-size: 16px;
+}
+
+.gridsystem p{
+    position: relative;
+    right: 38px;
+    bottom: 20px;
+    color: green;
+    font-weight: bold;
+}
+
+.demo1{
+    display: flex;
+    gap: 30px;
+}
+.demo2{
+    display: flex;
+    gap: 30px;
+
+}
+
+@media (max-width:320px) {
+    .demo1{
+        display: flex;
+        position: relative;
+        top: 15px;
+        flex-direction: column;
+    }
+    .logo{
+        /* display: flex;
+        justify-content: center;
+        align-items: center; */
+        position: relative;
+        right: 40px;
+    }
+    .search{
+        position: relative;
+        bottom: 22px;
+        margin-bottom: 10px;
+    }
+}
+

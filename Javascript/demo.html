@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo</title>
+    
+</head>
+<body>
+
+    <p id="demo"></p>
+    <script>
+       // console.log("Hello world")
+        var s = "Ashrita, gogula";
+        console.log(s.split())
+        console.log(s.length)
+        console.log(s.toUpperCase())
+        console.log(s.toLowerCase())
+        console.log(s.indexOf('A'))
+        console.log(s.replace('A','AAAA'))
+        console.log(s.lastIndexOf('a'))
+        console.log("Index of t: ",s.search('t'))
+        console.log
+        d ={
+            100 : 2,
+            "Thub" : 120
+        }
+        Object.entries(d).map(ele => {
+            console.log("KEYS: ",ele[0] ,"VALUES: ",ele[1])
+        })
+        console.log(Object.keys(d))
+        console.log(Object.values(d))      
+        
+        document.getElementById("demo").innerHTML = "Hello world";
+        document.write(5+3)
+
+        //errors
+
+        
+        
+    </script>
+    
+</body>
+</html>

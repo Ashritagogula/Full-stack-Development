@@ -1,0 +1,238 @@
+body{
+    margin: 0;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background: linear-gradient(rgb(49, 49, 131),rgb(172, 91, 91)); */
+    height: 100svh;
+    /* background: linear-gradient(to bottom right, #c9d6ff, #e2e2e2); */
+    /* background: linear-gradient(to right, #d9a7c7, #fffcdc); */
+    background: linear-gradient(to right, #a8edea, #fed6e3);
+    /* border: 4px solid black; */
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.container h1{
+    font-size: 42px;
+    color: #2e2e2e;
+    font-family: "Raleway", sans-serif;
+}
+.child{
+    background-color: rgba(0, 0, 0, 0.238);
+    position: relative;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    /* border: 1px solid goldenrod; */
+    justify-content: center;
+    align-items: center;
+}
+
+.hours,.minutes,.seconds,.milli{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:180px;
+    height:140px;
+    font-size: 50px;
+    margin: 30px;
+    font-family: Orbitron;
+    border-radius: 14px;
+    background-color: rgba(255, 255, 255, 0.585);
+}
+.buttons{
+    display: flex;
+    gap: 50px;
+    /* border: 1px solid red; */
+    flex-wrap: wrap;
+    margin: 24px;
+    
+}
+
+.start,.stop,.restart{
+    padding: 10px 40px ;
+    background-color: rgba(80, 74, 74, 0.585);
+    border-radius: 14px;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.241);
+}
+
+.start:hover,
+.stop:hover,
+.restart:hover {
+    background-color: rgba(0, 0, 0, 0.585);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* button{
+    background-color: rgba(80, 74, 74, 0.185);
+    border: none;
+    color: aliceblue;
+} */
+
+
+@media (max-width:426px){
+    .child{
+        display: flex;
+        padding: 20px;
+        margin: 10px;
+        gap: 7px;
+        /* border: 2px solid white; */
+    }
+    .hours,
+        .minutes,
+        .seconds{
+        height: 80px;
+        width: 100px;
+        font-size: 30px;
+        gap: 2px;
+        display: flex;
+        margin: 1px;
+        /* border: 2px solid white; */
+    }
+
+    .buttons{
+        gap: 2px;
+        gap: 30px;
+    }
+
+    .container h1{
+        font-size: 38px;
+    }
+
+    .start,
+    .stop,
+    .restart{
+        /* width: 30px;
+        height: 30px; */
+        /* gap: 30px; */
+        padding: 9px 20px;
+
+
+        }
+}
+
+
+@media (max-width:376px) {
+    .child {
+        display: flex;
+        padding: 20px;
+        margin: 10px;
+        gap: 7px;
+        /* border: 2px solid white; */
+    }
+
+    .hours,
+    .minutes,
+    .seconds {
+        height: 60px;
+        width: 90px;
+        font-size: 30px;
+        gap: 2px;
+        display: flex;
+        margin: 1px;
+        /* border: 2px solid white; */
+    }
+
+    .buttons {
+        /* gap: 2px; */
+        gap: 30px;
+    }
+
+    .container h1 {
+        font-size: 34px;
+    }
+
+    .start,
+    .stop,
+    .restart {
+        /* width: 30px;
+        height: 30px; */
+        /* gap: 30px; */
+        padding: 9px 20px;
+
+
+    }
+}
+
+
+@media (max-width:321px) {
+    .child {
+        display: flex;
+        padding: 20px;
+        margin: 10px;
+        gap: 7px;
+        /* border: 2px solid white; */
+    }
+
+    .hours,
+    .minutes,
+    .seconds {
+        height: 50px;
+        width: 70px;
+        font-size: 30px;
+        gap: 2px;
+        display: flex;
+        margin: 1px;
+        /* border: 2px solid white; */
+    }
+
+    .buttons {
+        /* gap: 2px; */
+        gap: 16px;
+    }
+
+    .container h1 {
+        font-size: 32px;
+    }
+
+    .start,
+    .stop,
+    .restart {
+        /* width: 30px;
+        height: 30px; */
+        /* gap: 30px; */
+        padding: 9px 20px;
+
+    }
+}
+
+
+@media (min-width: 427px) and (max-width: 1024px) {
+    .container h1 {
+        font-size: 40px;
+    }
+
+    .child {
+        padding: 20px;
+        margin: 10px;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .hours,
+    .minutes,
+    .seconds,
+    .milli {
+        height: 100px;
+        width: 130px;
+        font-size: 36px;
+        margin: 10px;
+    }
+
+    .buttons {
+        gap: 30px;
+        flex-wrap: wrap;
+    }
+
+    .start,
+    .stop,
+    .restart {
+        padding: 10px 30px;
+        font-size: 16px;
+    }
+}

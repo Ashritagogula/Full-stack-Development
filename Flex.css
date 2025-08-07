@@ -1,0 +1,169 @@
+.parent {
+    height: auto;
+    width: 100%;
+    background-color: antiquewhite;
+    display: flex;
+    flex-wrap: wrap;
+    /* Allow wrapping */
+    justify-content: center;
+    gap: 10px;
+    /* Optional: adds space between boxes */
+}
+
+.Person1,
+.Person2,
+.Person3,
+.Person4,
+.Person5,
+.Person6,
+.Person7 {
+    width: 380px;
+    height: 400px;
+    display: flex;
+    padding: 30px;
+    border: 3px solid black;
+    position: relative;
+    top: 10px;
+    margin: 20px;
+}
+
+.image1{
+    background-image: url(ashrita.png);
+    height: 90px;
+    width: 90px;
+    border: 3px solid rgb(203, 116, 116);
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    position: relative;
+    left: 40%;
+    bottom: 17%;
+
+}
+
+.image3 {
+    background-image: url(ashrita.png);
+    height: 90px;
+    width: 90px;
+    border: 3px solid rgb(203, 116, 116);
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    position: relative;
+    left: 40%;
+    bottom: 17%;
+}
+
+.image2{
+    background-image: url(ashrita.png);
+    height: 90px;
+    width: 90px;
+        border: 3px solid rgb(203, 116, 116);
+        border-radius: 50%;
+        justify-content: center;
+        align-items: center;
+        background-size: cover;
+        position: relative;
+        left: 40%;
+        bottom: 17%;
+}
+
+.image4 {
+    background-image: url(ashrita.png);
+    height: 90px;
+    width: 90px;
+    border: 3px solid rgb(203, 116, 116);
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    position: relative;
+    left: 40%;
+    bottom: 17%;
+}
+
+.image5 {
+    background-image: url(ashrita.png);
+    height: 90px;
+    width: 90px;
+    border: 3px solid rgb(203, 116, 116);
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    position: relative;
+    left: 40%;
+    bottom: 17%;
+}
+
+.image6 {
+    background-image: url(ashrita.png);
+    height: 90px;
+    width: 90px;
+    border: 3px solid rgb(203, 116, 116);
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    position: relative;
+    left: 40%;
+    bottom: 17%;
+}
+
+.image7 {
+    background-image: url(ashrita.png);
+    height: 90px;
+    width: 90px;
+    border: 3px solid rgb(203, 116, 116);
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    position: relative;
+    left: 40%;
+    bottom: 17%;
+}
+
+
+
+.Person1 {
+    background-color: rgb(190, 157, 157);
+}
+
+.Person2 {
+    background-color: rgb(150, 199, 185);
+}
+
+.Person3 {
+    background-color: rgb(214, 219, 172);
+}
+
+.Person4 {
+    background-color: rgb(217, 181, 219);
+}
+
+.Person5 {
+    background-color: rgb(170, 175, 208);
+}
+
+.Person6 {
+    background-color: rgb(179, 230, 171);
+}
+
+.Person7 {
+    background-color: rgb(175, 155, 194);
+}
+
+@media (max-width: 768px) {
+    .Person1,
+    .Person2,
+    .Person3,
+    .Person4,
+    .Person5,
+    .Person6,
+    .Person7 {
+        width: 100%;
+    }
+}

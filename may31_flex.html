@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex</title>
+    <style>
+        .parent{
+            width: 100%;
+            height: 200px;
+            background-color: #FFDCDC;
+            display: flex;
+            justify-content: space-around;
+            flex-direction: row;
+        }
+        .parent1{
+            width: 100%;
+            height: 200px;
+            background-color: #FFF2EB;
+            display: flex;
+            justify-content: flex-end;
+        }
+        .parent2{
+            width: 100%;
+            height: 200px;
+            background-color: #FFE8CD;
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .parent4{
+            width: 100%;
+            height: 200px;
+            background-color: #FFD6BA;
+            display: flex;
+            justify-content:center;
+            flex-direction: column;
+
+        }
+        .parent5{
+            width: 100%;
+            height: 200px;
+            background-color: #B0DB9C;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .parent6{
+            width: 100%;
+            height: 200px;
+            background-color: #b9cbd3;
+            display: flex;
+            justify-content:safe;
+            flex-direction: column;
+
+        }
+
+        .parent7{
+            width: 100%;
+            height: 200px;
+            background-color: #94B4C1;
+            display: flex;
+            justify-content:center;
+            flex-direction:initial;
+        }
+
+        .parent8{
+            width: 100%;
+            height: 200px;
+            background-color: #547792;
+            display: flex;
+            justify-content:flex-end;
+            flex-direction:row-reverse;
+        }
+        .parent9{
+            width: 100%;
+            height: 200px;
+            background-color: #213448;
+            display: flex;
+            justify-content:stretch;
+            flex-direction:column-reverse;
+        }
+        .child1{
+            width: 150px;
+            height: 150px;
+            background-color: burlywood;
+            text-align: center;
+        }
+        .child2{
+            width: 150px;
+            height: 150px;
+            background-color: cadetblue;
+            text-align: center;
+        }
+        .child3{
+            width: 150px;
+            height: 150px;
+            background-color: chocolate;
+            text-align: center;
+        }
+        .child4{
+            width: 150px;
+            height: 150px;
+            background-color: darkgray;
+            text-align: center;
+        }
+
+        .number{
+            width: 100%;
+            height: 800px;
+            display: flex;
+            border: 3px solid black;
+            flex-wrap: wrap;
+            row-gap: 10px;
+        }
+
+        .one{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            justify-content: start;
+            align-items: start;
+            display: flex;
+        }
+
+        .two{
+            width: 100px;
+            height: 100px;
+            background-color: #FFD6BA;
+            justify-content: start;
+            align-items: center;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .three{
+            width: 100px;
+            height: 100px;
+            background-color: #94B4C1;
+            justify-content: start;
+            align-items: end;
+            display: flex;
+        }
+
+        .four{
+            width: 100px;
+            height: 100px;
+            background-color: #519dbb;
+            justify-content: center;
+            display: flex;
+        }
+        
+        
+        
+
+    </style>
+</head>
+<body>
+    <h1>Display flex, justify-content, flex direction</h1>
+    <div class="parent">
+        <div class="child1">A</div>
+        <div class="child2">s</div>
+        <div class="child3">h</div>
+        <div class="child4">u</div>
+        <!-- ever allow children to move putside the parent -->
+    </div>
+    <div class="parent1">
+        <div class="child1">A</div>
+        <div class="child2">s</div>
+        <div class="child3">h</div>
+        <div class="child4">u</div>
+    </div>
+    <div class="parent2">
+        <div class="child1">A</div>
+        <div class="child2">s</div>
+        <div class="child3">h</div>
+        <div class="child4">u</div>
+    </div>
+    <div class="parent4">
+        <div class="child1">A</div>
+        <div class="child2">s</div>
+        <div class="child3">h</div>
+        <div class="child4">u</div>
+    </div>
+    <h3>Eliminating the extra space, then flex will reduce the extra space, it the first priority. but when there is no space to eliminate, i dont want to allow the flex to adjust the space , arranging the child blocks (when the size of the screen is srinked, the children blocks will come down , we use flex wrap)</h3>
+    <div class="parent5">
+        <div class="child1">A</div>
+        <div class="child2">s</div>
+        <div class="child3">h</div>
+        <div class="child4">u</div>
+    </div>
+    <div class="parent6">
+        <div class="child1">A</div>
+        <div class="child2">s</div>
+        <div class="child3">h</div>
+        <div class="child4">u</div>
+    </div>
+    <div class="parent7">
+        <div class="child1">A</div>
+        <div class="child2">s</div>
+        <div class="child3">h</div>
+        <div class="child4">u</div>
+    </div>
+    <div class="parent8">
+        <div class="child1">A</div>
+        <div class="child2">s</div>
+        <div class="child3">h</div>
+        <div class="child4">u</div>
+    </div>
+    <div class="parent9">
+        <div class="child1">A</div>
+        <div class="child2">s</div>
+        <div class="child3">h</div>
+        <div class="child4">u</div>
+    </div>
+    <h1>justify-content, align items</h1>
+    
+    <div class="number">
+        <div class="one">1</div>
+        <div class="two">2</div>
+        <div class="three">3</div>
+        <div class="four">4</div>
+    </div>
+</body>
+
+</html>

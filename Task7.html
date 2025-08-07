@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <title>Task 7</title>
+    </head>
+    <body>
+        <h1>Application Form</h1>
+        <form>
+        <label>Name:</label>
+        <input type="text" placeholder="Enter name:" required/>
+        <br><br>
+        <label>Father Name:</label>
+        <input type="text" placeholder="Enter father name:" required/>
+        <br><br>
+        <label>Mother Name:</label>
+        <input type="text" placeholder="Enter mother name:" required/>
+        <br><br>
+        <label>Date of Birth:</label>
+        <input type="date" required/>
+        <br><br>
+        <label>Gender:</label>
+        <select>
+            <option>Male</option>
+            <option>Female</option>
+            <option>Other</option>
+        </select>
+        <br><br>
+        <label>Address: </label>
+        <textarea placeholder="Enter Address:" required></textarea>
+        <br><br>
+        <label>Academic Details:</label>
+        <table border="1" cellspacing="0" cellpadding="5">
+            <tr>
+                <th>Board/University</th>
+                <th>Year of Passing</th>
+                <th>Percentage</th>
+            </tr>
+            <tr>
+                <td><input type="text" placeholder="Enter Board/University:" required/></td>
+                <td><input type="text" placeholder="Enter Year of Passing:" required/></td>
+                <td><input type="text" placeholder="Enter Percentage:" required/></td>
+            </tr>
+            <tr>
+                <td><input type="text" placeholder="Enter Board/University:" required/></td>
+                <td><input type="text" placeholder="Enter Year of Passing:" required/></td>
+                <td><input type="text" placeholder="Enter Percentage:" required/></td>
+            </tr>
+            <tr>
+                <td><input type="text" placeholder="Enter Board/University:" required/></td>
+                <td><input type="text" placeholder="Enter Year of Passing:" required/></td>
+                <td><input type="text" placeholder="Enter Percentage:" required/></td>
+        </table>
+        <br>
+        <label>Skills:</label><br>
+        <div>
+            <input type="checkbox" id="c" name="skills" value="C">
+            <label for="c">C</label>
+        </div>
+        <div>
+            <input type="checkbox" id="cpp" name="skills" value="C++">
+            <label for="cpp">C++</label>
+        </div>
+        <div>
+            <input type="checkbox" id="java" name="skills" value="Java">
+            <label for="java">Java</label>
+        </div>
+        <div>
+            <input type="checkbox" id="python" name="skills" value="Python">
+            <label for="python">Python</label>
+        </div>
+        <label for="hobbies">Hobbies:</label><br>
+        <ol>
+            <li><input type="text" name="hobby1" placeholder="Hobby 1" required></li>
+            <li><input type="text" name="hobby2" placeholder="Hobby 2" required></li>
+            <li><input type="text" name="hobby3" placeholder="Hobby 3" required></li>
+            <li><input type="text" name="hobby4" placeholder="Hobby 4" required></li>
+        </ol>
+        <label>Declaration:</label><br>
+        <input type="text"required><br><br>
+        <input type="file">
+    </form>
+    </body>
+</html>

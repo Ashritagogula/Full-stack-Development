@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: teal;
+            position: absolute;
+            top: 0;
+            left: 0;
+            
+        }
+
+        .buttons {
+            margin-top: 150px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box"></div>
+
+    <p id="demo"></p>
+
+    <div class="buttons">
+        <button onclick="moveLeft()">Move left</button>
+        <button onclick="moveRight()">Move right</button>
+        <button onclick="moveTop()">Move top</button>
+        <button onclick="moveBottom()">Move bottom</button>
+    </div>
+
+    <script>
+        let topPos = 0;
+        let leftPos = 0;
+
+        const box = document.getElementsByClassName("box")[0];
+
+        function moveLeft() {
+            leftPos -= 50;
+            box.style.left = leftPos + "px";
+        }
+
+        function moveRight() {
+            leftPos += 50;
+            box.style.left = leftPos + "px";
+        }
+
+        function moveTop() {
+            topPos -= 50;
+            box.style.top = topPos + "px";
+        }
+
+        function moveBottom() {
+            topPos += 50;
+            box.style.top = topPos + "px";
+        }
+    </script>
+
+</body>
+
+</html>

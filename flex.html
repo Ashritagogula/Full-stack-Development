@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex</title>
+    <style>
+        .parent1{
+            display: flex;
+            justify-content: space-between;
+            border: 2px solid rgb(0, 0, 0);
+            
+        }
+
+        .child1, .child2, .child3{
+            width: 200px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+
+        }
+        .child1{
+            background-color: #555879;
+        }
+        .child2{
+            background-color: #98A1BC;
+        }
+        .child3{
+            background-color: #DED3C4;
+        }
+
+        .parent2{
+            display: flex;
+            justify-content: space-around;
+            border: 2px solid rgb(0, 0, 0);
+        }
+
+        .parent3{
+            display: flex;
+            justify-content: space-evenly;
+            border: 2px solid rgb(0, 0, 0);
+        }
+
+        .parent4{
+            display: flex;
+            border: 2px solid rgb(0, 0, 0);
+        }
+
+        .parent1, .parent2, .parent3{
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+        .parent4{
+            margin-top: 30px;
+            display: grid;
+            color: white;
+            gap: 30px;
+            border: 3px solid black;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+        }
+
+        .child4,.child5,.child6,.child7,.child8,.child9,.child10,.child11,.child12{
+            width: 150px;
+            height: 150px;
+            font-size: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .child4,.child16{
+            justify-self: start;
+            align-self: start;
+            background-color: #555879;
+        }
+        .child5{
+            justify-self: center;
+            align-self: start;
+            background-color: #555879;
+        }
+        .child6,.child13{
+            justify-self:end;
+            align-self: start;
+            background-color: #555879;
+        }
+
+        .child7{
+            justify-self: start;
+            align-self: center;
+            background-color: #98A1BC;
+        }
+        .child8{
+            justify-self: center;
+            align-self: center;
+            background-color: #98A1BC;
+        }
+        .child9,.child15{
+            justify-self:end;
+            align-self: center;
+            background-color: #98A1BC;
+        }
+
+        .child10,.child14{
+            justify-self: start;
+            align-self: end;
+            background-color: #DED3C4;
+
+        }
+        .child11{
+            justify-self: center;
+            align-self: end;
+            background-color: #DED3C4;
+
+        }
+        .child12{
+            justify-self:end;
+            align-self: end;
+            background-color: #DED3C4;
+        }
+
+        .parent5{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            border: 2px solid black;
+            padding: 60px;
+            margin-top: 30px;
+            background-color: rgba(185, 179, 172, 0.242);
+        }
+
+        .child13, .child14,.child15,.child16{
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            overflow: hidden;
+        }
+
+        .child13:hover, .child14:hover, .child15:hover, .child16:hover{
+            transform: scale(1.2);
+            border-radius: 10px;  
+            background-size: cover; 
+        }
+
+        .child13:hover{
+            background-image: url(a1.png);
+        }
+
+        .child14:hover{
+            background-image: url(a2.png);
+        }
+
+        .child15:hover{
+            background-image: url(a3.png);
+        }
+        .child16:hover{
+            background-image: url(a4.png);
+        }
+
+        
+
+        .
+
+
+
+    </style>
+</head>
+<body>
+    <div class="parent1">
+        <div class="child1">space-between</div>
+        <div class="child2">space-between</div>
+        <div class="child3">space-between</div>
+    </div>
+
+    <div class="parent2">
+        <div class="child1">space-around</div>
+        <div class="child2">space-around</div>
+        <div class="child3">space-around</div>
+    </div>
+
+    <div class="parent3">
+        <div class="child1">space-evenly</div>
+        <div class="child2">space-evenly</div>
+        <div class="child3">space-evenly</div>
+    </div>
+
+    <div class="parent4">
+        <div class="child4">1</div>
+        <div class="child5">2</div>
+        <div class="child6">3</div>
+        <div class="child7">4</div>
+        <div class="child8">5</div>
+        <div class="child9">6</div>
+        <div class="child10">7</div>
+        <div class="child11">8</div>
+        <div class="child12">9</div>
+    </div>
+
+    <div class="parent5">
+        
+        <div class="child13">Hey</div>
+        <div class="child14">This is</div>
+        <div class="child15">For</div>
+        <div class="child16">Demo</div>
+    </div>
+</body>
+</html>

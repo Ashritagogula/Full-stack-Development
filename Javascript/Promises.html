@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promises</title>
+</head>
+<body>
+    <script>
+        const res = new Promise(function(resolve, reject){
+            x = 45;
+            if(x > 50){
+                resolve("Your age is more than 50");
+            
+            }
+            else{
+                reject("Your age is less than or equal to 50");
+                
+            }
+        });
+
+        res.then(function(){
+            console.log(res);
+        })
+
+        .catch(function(){
+            console.log(res);
+        })
+    </script>
+
+    <script>
+        function block1(){
+            return new Promise(function(resolve){
+            setTimeout(function(){
+              resolve("This");
+            },1000)
+        })
+    }
+
+
+        function block2(value){
+            return new Promise(function(resolve){
+            setTimeout(function(){
+              resolve(value+" is");
+            },1000)
+        })
+    }
+
+        function block3(value){
+            return new Promise(function(resolve){
+            setTimeout(function(){
+                resolve(value + " Ashrita");
+            },1000)
+        })
+    }
+        function block4(){
+            return new Promise(function(agree){
+                setTimeout(function(){
+                    agree(value + " !");
+                },1000)
+            })
+        }
+
+        /* block1().then(function(block1){
+            console.log("Block1 is executed",block1);
+            block2(block1).then(function(block2){
+                console.log("Block2 is executed",block2);
+                block3(block2).then(function(block3){
+                    console.log("Block3 is executed",block3);
+                })
+            })
+
+        })*/
+
+        async function Execute(){
+            try{
+                const result1 = await block1()
+                const result2 = await block2(result1)
+                const result3 = await block3(result2)
+                const result4 = await block4(result3)
+                console.log(result4);
+            }
+            catch(err){
+                console.log(err);
+            }
+        }
+
+        Execute();
+    </script>
+</body>
+</html>
