@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100svh;
+        background-color: black;
+        perspective: 100px;
+      }
+
+      .cube {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        transform-style: preserve-3d;
+      }
+
+      @keyframes myanimation {
+        100% {
+          transform: rotateX(360deg) rotateY(360deg);
+        }
+      }
+
+      .cube div {
+        width: 210px;
+        height: 210px;
+        position: absolute;
+        opacity: 0.6;
+      }
+
+      .cube div:hover {
+        background-color: rgb(255, 255, 255);
+      }
+
+      .left {
+        transform: rotateY(90deg) translateZ(100px);
+        background-color: #1b3c53;
+      }
+
+      .right {
+        transform: rotateY(90deg) translateZ(-100px);
+        background-color: #1b3c53;
+      }
+
+      .top {
+        transform: translateZ(100px);
+        background-color: #456882;
+      }
+
+      .bottom {
+        transform: translateZ(-100px);
+        background-color: #456882;
+      }
+
+      .front {
+        background-color: #8ab9c3;
+        transform: rotateX(90deg) translateZ(100px);
+      }
+
+      .back {
+        background-color: #8ab9c3;
+        transform: rotateX(90deg) translateZ(-100px);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="cube">
+      <div class="left"></div>
+      <div class="right"></div>
+      <div class="top"></div>
+      <div class="bottom"></div>
+      <div class="front"></div>
+      <div class="back"></div>
+    </div>
+  </body>
+</html>
