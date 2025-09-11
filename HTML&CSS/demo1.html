@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Butterflies</title>
+  <style>
+    body {
+      border: 1px solid rgb(0, 0, 0);
+    }
+
+    .butterfly {
+      position: relative;
+      transition: all 0.3s ease;
+      animation: fly 1s linear 3, floaty 3s ease-in-out infinite;
+      display: inline-block;
+    }
+    .butterfly img {
+      height: 50px;
+    }
+
+    @keyframes fly {
+      from { left: -60px; }
+      to   { left: 100%; }
+    }
+
+    @keyframes floaty {
+      0%   { transform: translateY(0px); }
+      50%  { transform: translateY(-40px); }
+      100% { transform: translateY(0px); }
+    }
+
+    .butterfly:nth-child(1) { animation-delay: 0s;   top: 0px; }
+    .butterfly:nth-child(2) { animation-delay: 0.5s; top: 40px; }
+    .butterfly:nth-child(3) { animation-delay: 1s;   top: 80px; }
+    .butterfly:nth-child(4) { animation-delay: 1.5s; top: 120px; }
+    .butterfly:nth-child(5) { animation-delay: 2s;   top: 160px; }
+    .butterfly:nth-child(6) { animation-delay: 2.5s; top: 200px; }
+    .butterfly:nth-child(7) { animation-delay: 3s;   top: 240px; }
+    .butterfly:nth-child(8) { animation-delay: 3.5s; top: 280px; }
+    .butterfly:nth-child(9) { animation-delay: 4s;   top: 320px; }
+    .butterfly:nth-child(10){ animation-delay: 4.5s; top: 360px; }
+    .butterfly:nth-child(11) { animation-delay: 5s;   top: 0px; }
+    .butterfly:nth-child(12) { animation-delay: 5.5s; top: 40px; }
+    .butterfly:nth-child(13) { animation-delay: 6s;   top: 80px; }
+    .butterfly:nth-child(14) { animation-delay: 6.5s; top: 120px; }
+    .butterfly:nth-child(15) { animation-delay: 7s;   top: 160px; }
+    .butterfly:nth-child(16) { animation-delay: 7.5s; top: 200px; }
+    .butterfly:nth-child(17) { animation-delay: 8s;   top: 240px; }
+    .butterfly:nth-child(18) { animation-delay: 8.5s; top: 280px; }
+    .butterfly:nth-child(19) { animation-delay: 9s;   top: 320px; }
+    .butterfly:nth-child(20){ animation-delay: 9.5s; top: 360px; }
+    
+  </style>
+</head>
+<body>
+  <div class="butterfly"><img src="butterfly.png" alt="Butterfly"></div>
+  <div class="butterfly"><img src="butterfly.png" alt="Butterfly"></div>
+  <div class="butterfly"><img src="butterfly.png" alt="Butterfly"></div>
+  <div class="butterfly"><img src="butterfly.png" alt="Butterfly"></div>
+  <div class="butterfly"><img src="butterfly.png" alt="Butterfly"></div>
+  <div class="butterfly"><img src="butterfly.png" alt="Butterfly"></div>
+  <div class="butterfly"><img src="butterfly.png" alt="Butterfly"></div>
+  <div class="butterfly"><img src="butterfly.png" alt="Butterfly"></div>
+  <div class="butterfly"><img src="butterfly.png" alt="Butterfly"></div>
+  <div class="butterfly"><img src="butterfly.png" alt="Butterfly"></div>
+  <div class="butterfly"><img src="butterfly.png" alt="Butterfly"></div>
+  <div class="butterfly"><img src="butterfly.png" alt="Butterfly"></div>
+  <div class="butterfly"><img src="butterfly.png" alt="Butterfly"></div>
+  <div class="butterfly"><img src="butterfly.png" alt="Butterfly"></div>
+  <div class="butterfly"><img src="butterfly.png" alt="Butterfly"></div>
+  <div class="butterfly"><img src="butterfly.png" alt="Butterfly"></div>
+  <div class="butterfly"><img src="butterfly.png" alt="Butterfly"></div>
+  <div class="butterfly"><img src="butterfly.png" alt="Butterfly"></div>
+  <div class="butterfly"><img src="butterfly.png" alt="Butterfly"></div>
+  <div class="butterfly"><img src="butterfly.png" alt="Butterfly"></div>
+</body>
+</html>
